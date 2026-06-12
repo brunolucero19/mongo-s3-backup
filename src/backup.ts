@@ -23,7 +23,7 @@ function getEnv(name: string, required = true): string {
 }
 
 function buildBackupKey(prefix: string, date: Date): string {
-  const iso = date.toISOString().split('T')[0]
+  const iso = date.toISOString().replace('T', '_').slice(0, 16).replace(':', '-')
   return `${prefix}db-backup-${iso}.gz`
 }
 
