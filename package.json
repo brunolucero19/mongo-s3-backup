@@ -1,0 +1,19 @@
+{
+  "name": "mongo-s3-backup",
+  "version": "1.0.0",
+  "description": "Standalone MongoDB backup to S3 for Railway cron jobs",
+  "type": "module",
+  "main": "dist/backup.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/backup.js",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.758.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  }
+}
